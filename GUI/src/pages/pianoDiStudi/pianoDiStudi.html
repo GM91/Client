@@ -1,0 +1,160 @@
+<ion-header style="width: 100%;height: 23%;" >
+  <ion-title style="margin-left: 45%; height: 80%;">Piano di Studi</ion-title>
+  <ion-navbar >
+    <ion-title >
+      Main Page
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<table style="width: auto; height: auto; margin-left: 30%; margin-top: 15%;">
+  <div *ngFor="let x of  arrayOfKeys">
+
+    <b *ngIf="x==0">Anno {{1}}</b>
+    <b *ngIf="x==1">Anno {{2}}</b>
+    <b *ngIf="x==2">Anno {{3}}</b>
+
+    <tr  style="border: solid;">
+    <td>
+        <b>{{dizf[x].ARC12}} </b>
+    </td>
+  </tr>
+
+    <tr style="border: solid;">
+      <td>
+        <b>{{dizf[x].FISIC6}}</b>
+      </td>
+    </tr>
+
+    <tr style="border: solid;">
+      <td>
+        <b>{{dizf[x].GI68}}</b>
+      </td>
+    </tr>
+
+
+    <tr style="border: solid;">
+      <td>
+        <b>{{dizf[x].INFO03}}</b>
+      </td>
+    </tr>
+
+
+    <tr style="border: solid;">
+      <td>
+        <b>{{dizf[x].MAT9}}</b>
+      </td>
+    </tr>
+
+
+    <tr style="border: solid;">
+      <td>
+        <b>{{dizf[x].PROGR9}}</b>
+      </td>
+    </tr>
+
+
+    <tr style="border: solid;">
+      <td>
+        <b>{{dizf[x].PROGR12}}</b>
+      </td>
+    </tr>
+
+
+    <tr style="border: solid;">
+      <td>
+        <b>{{dizf[x].ALGSTD12}}</b>
+      </td>
+    </tr>
+
+
+    <tr style="border: solid;">
+      <td>
+        <b>{{dizf[x].BSDLBSD9}}</b>
+      </td>
+    </tr>
+
+    <tr style="border: solid;">
+      <td>
+        <b>{{dizf[x].CALCN6}}</b>
+      </td>
+    </tr>
+
+
+    <tr style="border: solid;">
+      <td>
+        <b>{{dizf[x].MATII9}}</b>
+      </td>
+    </tr>
+
+
+    <tr style="border: solid;">
+      <td>
+        <b>{{dizf[x].SISOPL12}}</b>
+      </td>
+    </tr>
+
+
+    <tr style="border: solid;">
+      <td>
+        <b>{{dizf[x].TMOB}}</b>
+      </td>
+    </tr>
+
+
+    <tr style="border: solid;">
+      <td>
+        <b>{{dizf[x].CPD6}}</b>
+      </td>
+    </tr>
+
+
+    <tr style="border: solid;">
+      <td>
+        <b>{{dizf[x].EDI6}}</b>
+      </td>
+    </tr>
+
+
+    <tr style="border: solid;">
+      <td>
+        <b>{{dizf[x].PFIN}}</b>
+      </td>
+    </tr>
+
+
+    <tr style="border: solid;">
+      <td>
+        <b>{{dizf[x].PRGRIII9}}</b>
+      </td>
+    </tr>
+
+
+    <tr style="border: solid;">
+      <td>
+        <b>{{dizf[x].RCLRC9}}</b>
+      </td>
+    </tr>
+
+    <tr style="border: solid;">
+      <td>
+        <b>{{dizf[x].SIC}}</b>
+      </td>
+    </tr>
+
+
+    <tr style="border: solid;">
+      <td>
+        <b>{{dizf[x].SISGIS1}}</b>
+      </td>
+    </tr>
+
+
+    <tr style="border: solid;">
+      <td>
+        <b>{{dizf[x].TW6}}</b>
+      </td>
+    </tr>
+
+  </div>
+</table>

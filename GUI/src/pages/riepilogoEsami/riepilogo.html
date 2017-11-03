@@ -1,0 +1,47 @@
+<ion-header style="width: 100%;height: 23%;" >
+  <ion-title style="margin-left: 45%; height: 80%;">Riepilogo Esami</ion-title>
+  <ion-navbar >
+    <ion-title >
+      Main Page
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<table style="width: auto; height: 10%; margin-left: 45%; margin-top: 20%;">
+
+  <tr *ngFor="let x of  arrayOfKeys" style="border: solid;">
+
+    <td *ngIf=" x == 'cfu_conseguiti' " >
+      <b>cfu conseguiti: </b>  {{dizf[x]}}
+    </td>
+
+    <td *ngIf=" x == 'esami_registrati' ">
+      <b>esami registrati: </b>{{dizf[x]}}
+    </td>
+
+    <td *ngIf=" x == 'media_aritmetica_degli_esami' ">
+      <b>media aritmetica degli esami: </b> {{dizf[x]}}
+    </td>
+
+    <td *ngIf=" x == 'media_aritmetica_di_laurea' ">
+      <b>media aritmetica di laurea: </b> {{dizf[x]}}
+    </td>
+
+
+    <td *ngIf=" x == 'media_ponderata_degli_esami' ">
+      <b>media ponderata degli esami: </b> {{dizf[x]}}
+    </td>
+
+
+    <td *ngIf=" x == 'media_ponderata_di_laurea' ">
+      <b>media ponderata di laurea: </b> {{dizf[x]}}
+    </td>
+
+
+    <td *ngIf=" x == 'progressione_cfu' ">
+      <b>progressione cfu: </b> {{dizf[x]}}
+    </td>
+
+  </tr>
+
+</table>

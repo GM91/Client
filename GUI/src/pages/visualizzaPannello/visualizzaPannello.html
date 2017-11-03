@@ -1,0 +1,32 @@
+<ion-header style="width: 100%;height: 23%;" >
+  <ion-title style="margin-left: 45%; height: 80%;">Visualizza Pannello</ion-title>
+  <ion-navbar >
+    <ion-title >
+      Main Page
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+    <table style="width: auto; height: 10%; margin-left: 45%; margin-top: 20%;">
+
+        <tr *ngFor="let x of  arrayOfKeys" style="border: solid;">
+
+          <td *ngIf=" x == 'Appelli disponibili' " >
+            <b>{{x}}: </b> {{dizf[x]}}
+          </td>
+
+          <td *ngIf=" x == 'Iscrizioni appelli' ">
+            <b>{{x}}: </b>{{dizf[x]}}
+          </td>
+
+          <td *ngIf=" x == 'Piano carriera' ">
+            <b>{{x}}: </b> {{dizf[x]}}
+          </td>
+
+          <td *ngIf=" x == 'Tasse' ">
+            <b>{{x}}: </b> {{dizf[x]}}
+          </td>
+
+        </tr>
+
+    </table>
