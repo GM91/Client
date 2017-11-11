@@ -3,7 +3,8 @@ import { NavController,NavParams } from "ionic-angular";
 
 @Component({
   selector:'riepilogo',
-  templateUrl:'riepilogo.html'
+  templateUrl:'riepilogo.html',
+  styleUrls:['/riepilogo.scss']
 })
 export class riepilogo{
 

@@ -1,5 +1,5 @@
-<ion-header style="width: 100%;height: 23%;" >
-  <ion-title style="margin-left: 45%; height: 80%;">Riepilogo Esami</ion-title>
+<ion-header class="header">
+  <ion-title class="titolo">Riepilogo Esami</ion-title>
   <ion-navbar >
     <ion-title >
       Main Page
@@ -7,9 +7,10 @@
   </ion-navbar>
 </ion-header>
 
-<table style="width: auto; height: 10%; margin-left: 45%; margin-top: 20%;">
+<ion-content (ionScroll)="false">
+<table class="tabella">
 
-  <tr *ngFor="let x of  arrayOfKeys" style="border: solid;">
+  <tr class="riga" *ngFor="let x of  arrayOfKeys">
 
     <td *ngIf=" x == 'cfu_conseguiti' " >
       <b>cfu conseguiti: </b>  {{dizf[x]}}
@@ -45,3 +46,4 @@
   </tr>
 
 </table>
+</ion-content>

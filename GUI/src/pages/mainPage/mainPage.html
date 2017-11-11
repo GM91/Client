@@ -1,46 +1,49 @@
-<ion-header style="width: 100%;height: 18%;" >
-  <ion-title style="margin-left: 45%; height: 85%;">Main Page</ion-title>
+<ion-header class="header"  >
+  <ion-title class="titolo">Main Page</ion-title>
 </ion-header>
 
-<ion-grid style="padding-left: 12%; padding-top: 20%;">
+<ion-content (ionScroll)="false">
+<ion-grid class="griglia" >
 
-  <ion-row style=" padding-right: 10%;">
+  <ion-row class="riga">
 
-    <ion-col style="border: solid;">
-      <img src="../../assets/img/computer.png" style=" width: 20%; height: auto; margin-left: 35%;" (click)="pannello()">
-      <h4 style="margin-left: 26%;">Pannello di Controllo</h4>
+    <ion-col class="colonna" >
+      <img class="immagine" src="/android_asset/www/assets/img/computer.png"  (click)="pannello()">
+      <h4 class="sub-img">Pannello di Controllo</h4>
     </ion-col>
 
-    <ion-col style="border: solid;">
-      <img src="../../assets/img/occhiali.png" style="width: 20%; height: auto; margin-left: 35%;" (click)="piano_di_studi()">
-      <h4 style="margin-left: 31%;">Piano di Studi</h4>
+    <ion-col class="colonna">
+      <img class="immagine" src="/android_asset/www/assets/img/occhiali.png" (click)="piano_di_studi()">
+      <h4 class="sub-img">Piano di Studi</h4>
     </ion-col>
 
-    <ion-col style="border: solid;">
-      <img src="../../assets/img/lista.png" style="width: 20%; height: auto; margin-left: 35%;" (click)="riepilogo_esami()">
-      <h4 style="margin-left: 27%;">Riepilogo Esami</h4>
+    <ion-col class="colonna" >
+      <img class="immagine" src="/android_asset/www/assets/img/lista.png" (click)="riepilogo_esami()">
+      <h4 class="sub-img">Riepilogo Esami</h4>
     </ion-col>
 
   </ion-row>
 
 
 
-  <ion-row style=" padding-right: 10%;">
+  <ion-row class="riga">
 
-    <ion-col style="border: solid;">
-      <img src="../../assets/img/pollicione.png" style="width: 20%; height: auto; margin-left: 35%;" (click)="pagamenti()">
-      <h4 style="margin-left: 35%;">Pagamenti</h4>
+    <ion-col class="colonna">
+      <img class="immagine" src="/android_asset/www/assets/img/pollicione.png" (click)="pagamenti()">
+      <h4 class="sub-img">Pagamenti</h4>
     </ion-col>
 
-    <ion-col style="border: solid;">
-      <img src="../../assets/img/rubrica.png" style="width: 20%; height: auto; margin-left: 35%;" (click)="libretto()">
-      <h4 style="margin-left: 37%;">Libretto</h4>
+    <ion-col class="colonna">
+      <img class="immagine" src="/android_asset/www/assets/img/rubrica.png" (click)="libretto()">
+      <h4 class="sub-img">Libretto</h4>
     </ion-col>
 
-    <ion-col style="border: solid;">
+    <ion-col class="colonna">
     </ion-col>
 
   </ion-row>
 
 
 </ion-grid>
+</ion-content>
+

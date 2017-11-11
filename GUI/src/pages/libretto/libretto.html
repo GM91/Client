@@ -1,5 +1,5 @@
-<ion-header style="width: 100%;height: 23%;" >
-  <ion-title style="margin-left: 45%; height: 80%;">Libretto</ion-title>
+<ion-header class="header" >
+  <ion-title  class="titolo" >Libretto</ion-title>
   <ion-navbar >
     <ion-title >
       Main Page
@@ -7,14 +7,16 @@
   </ion-navbar>
 </ion-header>
 
-<table style="width: auto; height: 10%; margin-left: 30%; margin-top: 20%;">
+<ion-content (ionScroll)="false" >
+<table class="tabella">
 
-  <tr *ngFor="let x of  arrayOfKeys" style="border: solid;">
+  <tr  class="riga" *ngFor="let x of  arrayOfKeys">
 
-    <td *ngIf=" x >= '0' " >
+    <td class="colonna"  *ngIf=" x >= '0' " >
       <b>Esame:</b> {{dizf[x].attivita}},{{dizf[x].stato}}, <b>Voto:</b> {{dizf[x].voto}}, <b>Anno di Corso:</b> {{dizf[x].anno_di_corso}}
     </td>
 
   </tr>
 
 </table>
+</ion-content>

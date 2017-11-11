@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, Inject} from '@angular/core';
 
 import {NavController, NavParams} from "ionic-angular";
 import {Http} from "@angular/http";
@@ -8,18 +8,24 @@ import {riepilogo} from "../riepilogoEsami/riepilogo";
 import {pagamenti} from "../pagamenti/pagamenti";
 import {libretto} from "../libretto/libretto";
 
+import { MY_CONFIG_TOKEN, MY_CONFIG, ApplicationConfig} from "../../app/app-config";
+
 @Component({
   selector:'mainPage',
-  templateUrl: 'mainPage.html'
+  templateUrl: 'mainPage.html',
+  providers: [{ provide: MY_CONFIG_TOKEN, useValue: MY_CONFIG }],
+  styleUrls:['/mainPage.scss']
 })
 export class MainPage {
   private matricola:String;
   private password:String;
   private items;
+  private url:string;
 
-  constructor(public navCtrl: NavController,public http: Http,public navParams:NavParams) {
+  constructor(public navCtrl: NavController,public http: Http,public navParams:NavParams,@Inject(MY_CONFIG_TOKEN) private config: ApplicationConfig) {
     this.matricola = this.navParams.get("mat");
     this.password = this.navParams.get("pass");
+    this.url = this.config.serverUrl;
     //console.log(this.matricola);
     //console.log(this.password);
   }
@@ -31,7 +37,7 @@ export class MainPage {
       password:this.password
     };
 
-    this.http.post("http://127.0.0.1:5000/piano",postParams).subscribe(data=>{
+    this.http.post(this.url+"piano",postParams).subscribe(data=>{
       this.items = data.json();
       console.log(this.items);
       if(this.items.isEmpty){
@@ -55,7 +61,7 @@ export class MainPage {
       password:this.password
     };
 
-    this.http.post("http://127.0.0.1:5000/pannello",postParams).subscribe(data=>{
+    this.http.post(this.url+"pannello",postParams).subscribe(data=>{
       this.items = data.json();
       //console.log(this.items);
       if(this.items.isEmpty){
@@ -77,7 +83,7 @@ export class MainPage {
       password:this.password
     };
 
-    this.http.post("http://127.0.0.1:5000/riepilogo",postParams).subscribe(data=>{
+    this.http.post(this.url+"riepilogo",postParams).subscribe(data=>{
       this.items = data.json();
       console.log(this.items);
       if(this.items.isEmpty){
@@ -98,7 +104,7 @@ export class MainPage {
       password:this.password
     };
 
-    this.http.post("http://127.0.0.1:5000/pagamenti",postParams).subscribe(data=>{
+    this.http.post(this.url+"pagamenti",postParams).subscribe(data=>{
       this.items = data.json();
       console.log(this.items);
       if(this.items.isEmpty){
@@ -119,7 +125,7 @@ export class MainPage {
       password:this.password
     };
 
-    this.http.post("http://127.0.0.1:5000/libretto",postParams).subscribe(data=>{
+    this.http.post(this.url+"libretto",postParams).subscribe(data=>{
       this.items = data.json();
       console.log(this.items);
       if(this.items.isEmpty){

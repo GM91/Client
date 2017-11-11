@@ -18,6 +18,7 @@ import {pianoDiStudi} from "../pages/pianoDiStudi/pianoDiStudi";
 import {riepilogo} from "../pages/riepilogoEsami/riepilogo";
 import {pagamenti} from "../pages/pagamenti/pagamenti";
 import {libretto} from "../pages/libretto/libretto";
+import {NativeStorage} from "@ionic-native/native-storage";
 
 @NgModule({
   declarations: [
@@ -54,6 +55,7 @@ import {libretto} from "../pages/libretto/libretto";
   ],
   providers: [
     StatusBar,
+    NativeStorage,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]

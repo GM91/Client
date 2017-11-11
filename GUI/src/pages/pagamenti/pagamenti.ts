@@ -3,7 +3,8 @@ import { NavController,NavParams } from "ionic-angular";
 
 @Component({
   selector:'pagamenti',
-  templateUrl:'pagamenti.html'
+  templateUrl:'pagamenti.html',
+  styleUrls:['/pagamenti.scss']
 })
 export class pagamenti{
   private dizs;

@@ -5,7 +5,8 @@ import {NavController, NavParams} from "ionic-angular";
 
 @Component({
   selector:'pianoPage',
-  templateUrl: 'pianoDiStudi.html'
+  templateUrl: 'pianoDiStudi.html',
+  styleUrls:['/pianoDiStudi.scss']
 })
 export class pianoDiStudi{
 

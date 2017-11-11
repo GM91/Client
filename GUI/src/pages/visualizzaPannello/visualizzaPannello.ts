@@ -3,7 +3,8 @@ import { NavController,NavParams } from "ionic-angular";
 
 @Component({
   selector: 'pannello',
-  templateUrl: 'visualizzaPannello.html'
+  templateUrl: 'visualizzaPannello.html',
+  styleUrls:['/visualizzaPannello.scss']
 })
 export class visualizzaPannello{
 
@@ -19,10 +20,10 @@ export class visualizzaPannello{
 
 
     this.arrayOfKeys = Object.keys(this.dizf) //Creiamo un array di chiavi dell'oggetto(dizionario) in modo da poterci iterare su;
-
+    console.log(this.dizf)
     /*
     //Provo a stampare le varie chiavi del dizionario interno;
-    console.log(this.dizf)
+
     console.log(this.dizf["Appelli disponibili"])
     console.log(this.dizf["Iscrizioni appelli"])
     console.log(this.dizf["Piano carriera"])
